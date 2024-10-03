@@ -1,6 +1,6 @@
 
 
-const alpue_version = 'dev.1.11'
+const alpue_version = 'dev.1.12'
 console.log('---------- Alpue Analytics TRACKING JS loaded, version: ', alpue_version)
 
 
@@ -24,7 +24,7 @@ const logAlpueEvent = function(property, event_name){
         })
     }
     console.log('---------- AA™ config sent to server:', JSON.parse(config.body));
-    fetch(localURL, config)
+    fetch(cloudURL, config)
         .then(res => res.text())
         .then(data => console.log('---------- AA\u2122 server:', data))
 }
