@@ -1,10 +1,5 @@
 
 
-
-
-
-// git add . && git commit -m "update" && git push origin main
-
 const alpue_version = 'dev.1.10'
 console.log('---------- Alpue Analytics TRACKING JS loaded, version: ', alpue_version)
 
@@ -24,7 +19,7 @@ const logAlpueEvent = function(property, event_name){
             event_timestamp_sec: Math.floor(Date.now() / 1000),
             page_title: document.title,
             page_url: document.location.href,
-            user_agent: document.user_agent
+            user_agent: navigator.userAgent
         })
     }
     console.log('---------- AA™ config sent to server:', JSON.parse(config.body));
@@ -34,3 +29,5 @@ const logAlpueEvent = function(property, event_name){
 }
 
 // logAlpueEvent('prop_new_06_1727970808571', 'page_view')
+// git add . && git commit -m "update" && git push origin main
+
