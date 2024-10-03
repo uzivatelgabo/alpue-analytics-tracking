@@ -4,7 +4,7 @@
 
 
 
-const alpue_version = 'dev.1.03'
+const alpue_version = 'dev.1.04'
 console.log('--------------------------------------------------')
 console.log('----- Alpue Analytics TRACKING JS loaded, version: ', alpue_version)
 
