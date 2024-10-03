@@ -23,7 +23,8 @@ const logAlpueEvent = function(property, event_name){
             event_timestamp: Date.now(),
             event_timestamp_sec: Math.floor(Date.now() / 1000),
             page_title: document.title,
-            page_url: document.location.href
+            page_url: document.location.href,
+            user_agent: document.user_agent
         })
     }
     fetch(url, config)
