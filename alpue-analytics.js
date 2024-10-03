@@ -1,12 +1,13 @@
 
 
-const alpue_version = 'dev.1.10'
+const alpue_version = 'dev.1.11'
 console.log('---------- Alpue Analytics TRACKING JS loaded, version: ', alpue_version)
 
 
 const logAlpueEvent = function(property, event_name){
     // console.log(`AA\u2122: fetching ${event_name} to ${property}`)
-    const url = 'https://logrecordtobq-ey2vbzxqaa-uc.a.run.app'
+    const localURL = 'http://127.0.0.1:5001/gais-analytics-demo/us-central1/logRecordToBQ'
+    const cloudURL = 'https://logrecordtobq-ey2vbzxqaa-uc.a.run.app'
     const config = {
         method: 'POST',
         headers: {
@@ -23,7 +24,7 @@ const logAlpueEvent = function(property, event_name){
         })
     }
     console.log('---------- AA™ config sent to server:', JSON.parse(config.body));
-    fetch(url, config)
+    fetch(localURL, config)
         .then(res => res.text())
         .then(data => console.log('---------- AA\u2122 server:', data))
 }
