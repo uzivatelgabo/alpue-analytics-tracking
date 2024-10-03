@@ -27,7 +27,7 @@ const logAlpueEvent = function(property, event_name){
             user_agent: document.user_agent
         })
     }
-    console.log('---------- AA\u2122 config sent to server:', config.body)
+    console.log('---------- AA™ config sent to server:', JSON.parse(config.body));
     fetch(url, config)
         .then(res => res.text())
         .then(data => console.log('---------- AA\u2122 server:', data))
