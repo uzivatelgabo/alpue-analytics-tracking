@@ -5,7 +5,7 @@
 
 // git add . && git commit -m "update" && git push origin main
 
-const alpue_version = 'dev.1.09'
+const alpue_version = 'dev.1.10'
 console.log('---------- Alpue Analytics TRACKING JS loaded, version: ', alpue_version)
 
 
@@ -27,6 +27,7 @@ const logAlpueEvent = function(property, event_name){
             user_agent: document.user_agent
         })
     }
+    console.log('---------- AA\u2122 config sent to server:', config)
     fetch(url, config)
         .then(res => res.text())
         .then(data => console.log('---------- AA\u2122 server:', data))
