@@ -24,7 +24,7 @@ const logAlpueEvent = function(property, event_name){
         })
     }
     console.log('---------- AA™ config sent to server:', JSON.parse(config.body));
-    fetch(cloudURL, config)
+    fetch(localURL, config)
         .then(res => res.text())
         .then(data => console.log('---------- AA\u2122 server:', data))
 }
