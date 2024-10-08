@@ -1,7 +1,7 @@
 
 
 const alpue_version = 'dev.1.15'
-console.log('Alpue Analytics loaded, version: ', alpue_version)
+console.log('AA™ loaded, version: ', alpue_version)
 
 
 const logAlpueEvent = function(property, event_name){
