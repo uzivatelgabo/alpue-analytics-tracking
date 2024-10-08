@@ -1,7 +1,7 @@
 
 
 const alpue_version = 'dev.1.14'
-console.log('---------- Alpue Analytics TRACKING JS loaded, version: ', alpue_version)
+console.log('Alpue Analytics loaded, version: ', alpue_version)
 
 
 const logAlpueEvent = function(property, event_name){
@@ -23,10 +23,10 @@ const logAlpueEvent = function(property, event_name){
             user_agent: navigator.userAgent
         })
     }
-    console.log('---------- AA™ config sent to server:', JSON.parse(config.body));
+    console.log('AA™ config sent to server:', JSON.parse(config.body));
     fetch(cloudURL, config)
         .then(res => res.text())
-        .then(data => console.log('---------- AA\u2122 server:', data))
+        // .then(data => console.log('---------- AA\u2122 server:', data))
 }
 
 // logAlpueEvent('prop_new_06_1727970808571', 'page_view')
