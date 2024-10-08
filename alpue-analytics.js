@@ -1,6 +1,6 @@
 
 
-const alpue_version = 'dev.1.14'
+const alpue_version = 'dev.1.15'
 console.log('Alpue Analytics loaded, version: ', alpue_version)
 
 
@@ -23,9 +23,12 @@ const logAlpueEvent = function(property, event_name){
             user_agent: navigator.userAgent
         })
     }
-    console.log('AA™ config sent to server:', JSON.parse(config.body));
+    // console.log('AA™ config sent to server:', JSON.parse(config.body));
     fetch(cloudURL, config)
         .then(res => res.text())
+        .then(() => {
+            console.log('AA™ fetched');
+        })
         // .then(data => console.log('---------- AA\u2122 server:', data))
 }
 
