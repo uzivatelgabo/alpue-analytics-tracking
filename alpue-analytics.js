@@ -1,7 +1,11 @@
+// git push origin main --force
 
 
 const alpue_version = 'dev.1.15'
 console.log('AA™ loaded, version: ', alpue_version)
+
+
+console.log('REFERRER: ', document.referrer)
 
 
 const logAlpueEvent = function(property, event_name){
